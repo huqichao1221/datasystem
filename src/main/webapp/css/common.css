@@ -1,0 +1,35 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+/**设置序号列的宽度*/
+.datagrid-header-rownumber,.datagrid-cell-rownumber{
+	width:40px;
+}
+
+/**form表单的样式*/
+#fm,#fm_modify{
+	margin:0;
+	padding:10px 20px;
+}
+.fm{
+	margin:0;
+	padding:10px 20px;
+}
+.ftitle{
+	font-size:14px;
+	font-weight:bold;
+	padding:5px 0;
+	margin-bottom:10px;
+	border-bottom:1px solid #ccc;
+}
+.fitem{
+	margin-bottom:5px;
+}
+.fitem label{
+	display:inline-block;
+	width:85px;
+}
+.fitem input{
+	width:200px;
+}

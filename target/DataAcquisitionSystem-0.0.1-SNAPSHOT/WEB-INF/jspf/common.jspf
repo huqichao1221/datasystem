@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
+<%
+//	String BaseURL=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath();
+	String BaseURL = request.getContextPath();
+	//String VERSION="1-2";//版本号用来控制客户端是否重新加载JS文件
+	String VERSION = new java.util.Date().getTime() + "";
+%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%--USE CDN 
+<script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+--%>
+<%--USE local --%>
+<script src="<%=BaseURL%>/jslib/jquery/jquery.min.js?ver=1.11.3" type="text/javascript"></script>
+
+<link href="<%=BaseURL%>/jslib/easyui/themes/default/easyui.css?ver=1.4.1" rel="stylesheet" type="text/css"/>
+<link href="<%=BaseURL%>/jslib/easyui/themes/icon.css?ver=1.4.1" rel="stylesheet" type="text/css"/>
+<link href="<%=BaseURL%>/css/common.css?ver=<%=VERSION%>" rel="stylesheet" type="text/css"/>
+
+<script src="<%=BaseURL%>/jslib/easyui/jquery.easyui.min.js?ver=1.5.1" type="text/javascript"></script>
+<script src="<%=BaseURL%>/jslib/easyui/locale/easyui-lang-zh_CN.js?ver=1.4.1" type="text/javascript"></script>
+<script src="<%=BaseURL%>/js/common.js?ver=<%=VERSION%>" type="text/javascript"></script>
+<script>
+	var VERSION = "<%=VERSION%>";
+	var BaseURL = "<%=BaseURL%>";
+	function getBaseURL(str) {
+		return BaseURL + str;
+	}
+	function getBaseURL2(str) {
+		return BaseURL + str + "/" + VERSION;
+	}
+	function getBaseURLAskVer(str) {
+		return BaseURL + str + "?var=" + VERSION;
+	}
+	
+</script>
+
